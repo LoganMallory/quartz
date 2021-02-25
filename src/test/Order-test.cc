@@ -26,8 +26,8 @@ void test_Order_ParameterizedConstructor() {
   assert(order.get_quantity() == q);
 }
 
-void test_Order_Constructor_PassByReference() {
-  if(LOG_LEVEL <= DEBUG) printf("\ttest_Order_Constructor_PassByReference\n");
+void test_Order_Constructor_ValueCopy() {
+  if(LOG_LEVEL <= DEBUG) printf("\ttest_Order_Constructor_ValueCopy\n");
 
   unsigned int p = rand();
   unsigned int q = rand();
@@ -197,7 +197,7 @@ void test_Order_SubQuantity() {
 void test_Order() {
   test_Order_DefaultConstructor();
   test_Order_ParameterizedConstructor();
-  test_Order_Constructor_PassByReference();
+  test_Order_Constructor_ValueCopy();
 
   test_Order_SetIndex();
   test_Order_SetPrice();
